@@ -6,8 +6,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.mygdx.template.enums.ScreenEnum;
+import com.mygdx.template.services.ScreenService;
 
 public class Template extends Game {
+	public final static String APP_NAME = "Template";
 
 	public final static int WIDTH = 405;
 	public final static int HEIGHT = 720;
@@ -17,22 +20,8 @@ public class Template extends Game {
 	
 	@Override
 	public void create () {
-		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		ScreenService.getInstance().initialize(this);
+		ScreenService.getInstance().setScreen(ScreenEnum.MAIN);
 	}
 
-	@Override
-	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.begin();
-		batch.draw(img, 0, 0);
-		batch.end();
-	}
-	
-	@Override
-	public void dispose () {
-		batch.dispose();
-		img.dispose();
-	}
 }
