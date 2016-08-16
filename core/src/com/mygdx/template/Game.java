@@ -7,6 +7,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Game extends ApplicationAdapter {
+
+	public final static int WIDTH = 405;
+	public final static int HEIGHT = 720;
+
 	SpriteBatch batch;
 	Texture img;
 	
