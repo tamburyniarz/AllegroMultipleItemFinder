@@ -14,9 +14,6 @@ public class Template extends Game {
 
 	public final static int WIDTH = 405;
 	public final static int HEIGHT = 720;
-
-	SpriteBatch batch;
-	Texture img;
 	
 	@Override
 	public void create () {
