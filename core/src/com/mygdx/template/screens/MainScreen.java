@@ -6,7 +6,7 @@ package com.mygdx.template.screens;
 public class MainScreen extends AbstractScreen {
     @Override
     public void buildStage() {
-        
+
     }
 
     @Override

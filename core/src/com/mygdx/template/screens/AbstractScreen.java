@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.mygdx.template.Game;
+import com.mygdx.template.Template;
 
 /**
  * Created by Senpai on 16.08.2016.
@@ -16,7 +16,7 @@ public abstract class AbstractScreen extends Stage implements Screen {
     protected Texture bgTexture;
 
     public AbstractScreen(){
-        super(new StretchViewport(Game.WIDTH,Game.HEIGHT,new OrthographicCamera()));
+        super(new StretchViewport(Template.WIDTH, Template.HEIGHT,new OrthographicCamera()));
     }
 
     public abstract void buildStage();
